@@ -1,0 +1,216 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recycling DomesticWaste in India</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --background: #050810;
+            --accent: #638cff;
+            --glass: rgba(255, 255, 255, 0.2);
+            --text: #fff;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--background);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        .glass {
+            background: var(--glass);
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            backdrop-filter: blur(10px);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .hero {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .feature {
+            margin: 20px;
+            width: calc(33.33% - 20px);
+            flex: 1 1 calc(33.33% - 20px);
+        }
+        .feature h2 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .feature p {
+            font-size: 16px;
+        }
+        .how-it-works {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .how-it-works h2 {
+            font-size: 36px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        .how-it-works ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .how-it-works li {
+            margin-bottom: 20px;
+        }
+        .how-it-works li::before {
+            content: "📦";
+            margin-right: 10px;
+        }
+        .cta {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .cta h2 {
+            font-size: 36px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        .cta form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .cta input {
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 300px;
+            margin-bottom: 10px;
+        }
+        .cta button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            background-color: var(--accent);
+            color: var(--text);
+            cursor: pointer;
+        }
+        .footer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        .footer p {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        .animate {
+            animation: fade-in 1s;
+        }
+        @media only screen and (max-width: 768px) {
+            .feature {
+                width: calc(50% - 20px);
+                flex: 1 1 calc(50% - 20px);
+            }
+        }
+        @media only screen and (max-width: 480px) {
+            .feature {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section class="hero glass animate">
+            <h1>Recycling DomesticWaste in India</h1>
+            <p>The smartest way to Recycling DomesticWaste in India 🚮</p>
+        </section>
+        <section class="features glass animate">
+            <div class="feature">
+                <h2>💡 Easy to Use</h2>
+                <p>Our platform is designed to be user-friendly and easy to navigate.</p>
+            </div>
+            <div class="feature">
+                <h2>📈 High Recycling Rate</h2>
+                <p>We have a high recycling rate, ensuring that your waste is properly disposed of.</p>
+            </div>
+            <div class="feature">
+                <h2>👍 Reliable Service</h2>
+                <p>Our service is reliable and efficient, ensuring that your waste is collected on time.</p>
+            </div>
+        </section>
+        <section class="how-it-works glass animate">
+            <h2>How it Works 🤔</h2>
+            <ul>
+                <li>📦 Schedule a pickup</li>
+                <li>🚮 We collect your waste</li>
+                <li>📈 We recycle your waste</li>
+            </ul>
+        </section>
+        <section class="cta glass animate">
+            <h2>Get Started 🚀</h2>
+            <form>
+                <input type="email" placeholder="Enter your email">
+                <button>Sign up 📝</button>
+            </form>
+        </section>
+        <footer class="footer glass animate">
+            <p>&copy; 2024 Recycling DomesticWaste in India</p>
+            <p>👍 Contact us: <a href="mailto:info@recyclingindia.com">info@recyclingindia.com</a></p>
+        </footer>
+    </div>
+    <script>
+        // Add event listener to button to submit form
+        const button = document.querySelector('.cta button');
+        button.addEventListener('click', (e) => {
+            e.preventDefault();
+            const input = document.querySelector('.cta input');
+            const email = input.value;
+            // Add your email signup logic here
+            console.log(`Email signup: ${email}`);
+        });
+    </script>
+</body>
+</html>
+```
